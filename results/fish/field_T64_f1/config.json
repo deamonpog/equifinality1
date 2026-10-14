@@ -1,0 +1,36 @@
+{
+  "tag": "field_T64_f1",
+  "window": 64,
+  "folds": [
+    1
+  ],
+  "seed": 20260713,
+  "grid": 32,
+  "patch": 2,
+  "splat": "bilinear",
+  "sigma": 0.6,
+  "clip_std": 6.0,
+  "d_model": 128,
+  "n_heads": 8,
+  "n_layers": 4,
+  "dropout": 0.1,
+  "batch_size": 32,
+  "epochs": 60,
+  "patience": 25,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "label_smoothing": 0.05,
+  "augment": {
+    "enabled": true,
+    "rotate": true,
+    "reflect": true,
+    "permute": false
+  },
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "raps_lambda": 0.1,
+  "raps_k_reg": 2
+}

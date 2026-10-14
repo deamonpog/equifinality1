@@ -1,0 +1,15 @@
+{
+  "tag": "transformer_inv_T64_depth",
+  "config": "configs/fish_transformer_inv_depth.yaml",
+  "n_params": 182771,
+  "n_params_by_fold": {
+    "0": 182771,
+    "1": 182771,
+    "2": 182771,
+    "3": 182771,
+    "4": 182771
+  },
+  "test_acc_mean": 0.7847256566216918,
+  "test_acc_std": 0.026181677514498538,
+  "epochs_budget": 120
+}

@@ -1,0 +1,36 @@
+# Control for Sect. 3.2: the raw-feature transformer of
+# configs/fish_transformer.yaml retrained for 120 epochs.
+#
+# Identical to configs/fish_transformer_inv.yaml except for the feature set
+# (all 20 raw per-agent features, including absolute x, y). The paper reports
+# folds 0 and 1 (0.939 and 0.948); only those two folds were run.
+
+tag: transformer_raw120_T64
+
+window: 64
+features: all           # the 20 raw per-agent features, incl. absolute x, y
+folds: [0, 1]           # the paper reports folds 0 and 1
+seed: 20260713
+
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+batch_size: 64
+epochs: 120             # matched to the invariant run
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+num_workers: 0
+
+augment:
+  enabled: true
+  rotate: true
+  reflect: true
+  permute: true
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

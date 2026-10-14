@@ -1,0 +1,16 @@
+{
+  "window": 64,
+  "epochs": 40,
+  "patience": 8,
+  "hidden": 128,
+  "layers": 2,
+  "lr": 0.001,
+  "batch_size": 128,
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

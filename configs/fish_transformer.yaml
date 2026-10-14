@@ -1,0 +1,44 @@
+# Trajectory transformer on raw per-agent features (absolute coordinates), T = 64,
+# 40 epochs.
+#
+# The first transformer of Sect. 3.2: it reached 0.825 while its validation
+# accuracy was still rising, i.e. it was undertrained. Kept to reproduce that
+# number; configs/fish_transformer_raw120.yaml is the converged control.
+
+tag: transformer_T64
+
+window: 64            # kick events, not seconds
+features: all         # all | basic   (ablation 3)
+folds: [0, 1, 2, 3, 4]
+seed: 20260713
+
+# Model. Small on purpose: only 11 classes, and ~12k-25k training windows.
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+# Training
+batch_size: 64
+epochs: 40
+patience: 8           # early stop on validation accuracy
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+num_workers: 4
+
+# Symmetries of the generating process. Rotation and reflection are genuine
+# symmetries of a circular arena with no handedness. Permutation is redundant
+# with the architecture (there is no agent-id embedding, so the model is
+# already exactly permutation invariant) but costs nothing and guards against
+# an implementation slip.
+augment:
+  enabled: true
+  rotate: true
+  reflect: true
+  permute: true
+
+# Conformal, consumed by step 10.
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

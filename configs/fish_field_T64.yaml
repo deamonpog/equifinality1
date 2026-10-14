@@ -1,0 +1,54 @@
+# Field (grid) representation of the fish data: a controlled theta_obs ablation.
+#
+# This is the LOSSY counterpart of configs/fish_transformer_inv.yaml. The same
+# runs, the same T=64 windows, the same grouped folds, the same 120-epoch
+# convergence budget -- but the observation is degraded: each kick event is
+# rendered onto a 32x32 density/momentum field, so per-agent identity and
+# sub-cell geometry are discarded before the model ever sees the data.
+#
+# The comparison against transformer_inv_T64 is only meaningful if BOTH models
+# are trained to convergence (the paper's fairness rule), so epochs and
+# patience match the trajectory config exactly.
+
+tag: field_T64
+
+window: 64
+folds: [0, 1, 2, 3, 4]
+seed: 20260713
+
+# Field renderer (genmod/fish/field.py)
+grid: 32                # G x G cells
+patch: 2                # 2x2 patch -> 16x16 = 256 tokens per frame
+splat: bilinear         # bilinear | gaussian
+sigma: 0.60             # only used when splat=gaussian
+clip_std: 6.0           # clip after per-channel standardization
+
+# Model (genmod/models/field_transformer.py), matched to the ~1.8M trajectory
+# transformer: identical encoder stack (4 spatial + 4 temporal + 1 pool).
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+# Batch 64 matches transformer_inv_T64 exactly: 25,620 windows / 64 = 400
+# steps/epoch x 120 = 48,000 optimizer steps, the same converged budget the
+# trajectory baseline got, so the comparison is step-matched, not just
+# epoch-matched. Needs ~49 GB (fits an 80 GB H100/H200). On a <=24 GB card
+# drop this to 16 -- see configs/fish_field_smoke.yaml.
+batch_size: 64
+epochs: 120
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+
+augment:
+  enabled: true
+  rotate: true          # arena rotation, applied in coordinate space
+  reflect: true         # flips y and vy before splatting
+  permute: false        # no-op: the field is permutation invariant by construction
+
+# Consumed by scripts/fish/10_calibrate_fish_raps.py, not by training.
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

@@ -1,0 +1,752 @@
+{
+  "arena_radius_m": 0.25,
+  "n_rules": 11,
+  "rule_table": [
+    {
+      "rule_id": 0,
+      "strategy_family": "none",
+      "neighbor_count": 0
+    },
+    {
+      "rule_id": 1,
+      "strategy_family": "nearest",
+      "neighbor_count": 1
+    },
+    {
+      "rule_id": 2,
+      "strategy_family": "nearest",
+      "neighbor_count": 2
+    },
+    {
+      "rule_id": 3,
+      "strategy_family": "nearest",
+      "neighbor_count": 3
+    },
+    {
+      "rule_id": 4,
+      "strategy_family": "random",
+      "neighbor_count": 1
+    },
+    {
+      "rule_id": 5,
+      "strategy_family": "random",
+      "neighbor_count": 2
+    },
+    {
+      "rule_id": 6,
+      "strategy_family": "random",
+      "neighbor_count": 3
+    },
+    {
+      "rule_id": 7,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 1
+    },
+    {
+      "rule_id": 8,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 2
+    },
+    {
+      "rule_id": 9,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 3
+    },
+    {
+      "rule_id": 10,
+      "strategy_family": "all",
+      "neighbor_count": 4
+    }
+  ],
+  "median_dt_s": 0.43419090909092,
+  "seed_sharing": {
+    "identical": 1,
+    "partial": 13,
+    "n_experiments": 50
+  },
+  "class_balanced": true,
+  "per_file": {
+    "0.agent-no-interaction-k0.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1558.0,
+        "p01": 1563.39,
+        "median": 1599.5,
+        "mean": 1600.0,
+        "p99": 1632.55,
+        "max": 1635.0
+      },
+      "run_duration_s": {
+        "min": 698.904,
+        "p01": 698.980979,
+        "median": 711.3614,
+        "mean": 710.520726,
+        "p99": 718.030911,
+        "max": 718.176
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.04420000000000691,
+        "median": 0.4095999999999904,
+        "mean": 0.4443531744840524,
+        "p99": 1.1534999999999906,
+        "max": 1.788599999999974
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001414213562373095,
+        "p01": 0.07218032973047436,
+        "median": 0.22707928130941404,
+        "mean": 0.2154475361742611,
+        "p99": 0.24239018131929355,
+        "max": 0.24583734460004242
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        0.0004433200000000001,
+        -0.0002228425
+      ],
+      "file": "0.agent-no-interaction-k0.dat",
+      "rule_id": 0,
+      "strategy_family": "none",
+      "neighbor_count": 0
+    },
+    "1.agent-nearest-k1.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1566.0,
+        "p01": 1567.47,
+        "median": 1599.5,
+        "mean": 1600.0,
+        "p99": 1649.18,
+        "max": 1658.0
+      },
+      "run_duration_s": {
+        "min": 716.1981000000001,
+        "p01": 716.2003050000001,
+        "median": 727.84825,
+        "mean": 726.951022,
+        "p99": 735.3340269999999,
+        "max": 735.3426999999999
+      },
+      "dt_s": {
+        "min": 0.00190000000000623,
+        "p01": 0.046048999999952114,
+        "median": 0.42070000000001073,
+        "mean": 0.45462853158223887,
+        "p99": 1.1706000000000218,
+        "max": 1.7829000000000406
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001,
+        "p01": 0.04884669896727925,
+        "median": 0.21855205329623423,
+        "mean": 0.20258179323051373,
+        "p99": 0.24154916683772684,
+        "max": 0.24506529742091188
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        3.623499999999986e-05,
+        0.00046568000000000005
+      ],
+      "file": "1.agent-nearest-k1.dat",
+      "rule_id": 1,
+      "strategy_family": "nearest",
+      "neighbor_count": 1
+    },
+    "1.agent-nearest-k2.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1553.0,
+        "p01": 1554.47,
+        "median": 1604.5,
+        "mean": 1600.0,
+        "p99": 1637.02,
+        "max": 1638.0
+      },
+      "run_duration_s": {
+        "min": 730.9148,
+        "p01": 731.093846,
+        "median": 740.74365,
+        "mean": 741.3223919999999,
+        "p99": 752.946361,
+        "max": 753.0988000000001
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.04904899999999373,
+        "median": 0.430499999999995,
+        "mean": 0.46361625515947463,
+        "p99": 1.1706510000000152,
+        "max": 1.8423999999999978
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001,
+        "p01": 0.041593268686170845,
+        "median": 0.20974508337503409,
+        "mean": 0.19271694482494692,
+        "p99": 0.24075921581530374,
+        "max": 0.24517748673155126
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.0024664575,
+        0.001318775
+      ],
+      "file": "1.agent-nearest-k2.dat",
+      "rule_id": 2,
+      "strategy_family": "nearest",
+      "neighbor_count": 2
+    },
+    "1.agent-nearest-k3.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1560.0,
+        "p01": 1561.47,
+        "median": 1603.0,
+        "mean": 1600.0,
+        "p99": 1638.12,
+        "max": 1644.0
+      },
+      "run_duration_s": {
+        "min": 739.566,
+        "p01": 739.695213,
+        "median": 749.7905499999999,
+        "mean": 748.8787940000001,
+        "p99": 753.2737000000001,
+        "max": 753.3766
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.04944899999997915,
+        "median": 0.43590000000000373,
+        "mean": 0.4683419599749844,
+        "p99": 1.175300000000022,
+        "max": 1.788599999999974
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001,
+        "p01": 0.035846896657869845,
+        "median": 0.197914122790669,
+        "mean": 0.18225131650273754,
+        "p99": 0.23947024867402633,
+        "max": 0.24480604567698075
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.0016642475000000002,
+        -0.00034733250000000006
+      ],
+      "file": "1.agent-nearest-k3.dat",
+      "rule_id": 3,
+      "strategy_family": "nearest",
+      "neighbor_count": 3
+    },
+    "2.agent-random-k1.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1563.0,
+        "p01": 1563.49,
+        "median": 1599.0,
+        "mean": 1600.0,
+        "p99": 1638.06,
+        "max": 1641.0
+      },
+      "run_duration_s": {
+        "min": 746.303,
+        "p01": 746.337496,
+        "median": 754.7909500000001,
+        "mean": 755.451708,
+        "p99": 762.629982,
+        "max": 762.7075
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.05089999999996991,
+        "median": 0.44114999999999327,
+        "mean": 0.47245260037523445,
+        "p99": 1.1739000000000033,
+        "max": 1.8423999999999978
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.0,
+        "p01": 0.027312817443099505,
+        "median": 0.18560711193270585,
+        "mean": 0.170323418205577,
+        "p99": 0.23791805311913597,
+        "max": 0.24476110802167897
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.00020027500000000003,
+        0.0005147675000000001
+      ],
+      "file": "2.agent-random-k1.dat",
+      "rule_id": 4,
+      "strategy_family": "random",
+      "neighbor_count": 1
+    },
+    "2.agent-random-k2.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1555.0,
+        "p01": 1557.94,
+        "median": 1601.0,
+        "mean": 1600.0,
+        "p99": 1635.61,
+        "max": 1641.0
+      },
+      "run_duration_s": {
+        "min": 744.4766,
+        "p01": 744.715475,
+        "median": 759.14355,
+        "mean": 757.1472640000002,
+        "p99": 764.075513,
+        "max": 764.108
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.05119999999999436,
+        "median": 0.44079999999996744,
+        "mean": 0.47351298561601,
+        "p99": 1.1838000000000193,
+        "max": 1.8423999999999978
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001,
+        "p01": 0.02596150997149434,
+        "median": 0.1812760326132498,
+        "mean": 0.16711706438370347,
+        "p99": 0.2377393530739074,
+        "max": 0.2644257929930437
+      },
+      "n_outside_arena": 2,
+      "centroid_xy": [
+        -0.0021219,
+        0.0012420925
+      ],
+      "file": "2.agent-random-k2.dat",
+      "rule_id": 5,
+      "strategy_family": "random",
+      "neighbor_count": 2
+    },
+    "2.agent-random-k3.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1558.0,
+        "p01": 1559.47,
+        "median": 1599.5,
+        "mean": 1600.0,
+        "p99": 1646.57,
+        "max": 1650.0
+      },
+      "run_duration_s": {
+        "min": 747.8629000000001,
+        "p01": 747.956882,
+        "median": 759.85285,
+        "mean": 759.2851820000001,
+        "p99": 771.1491940000001,
+        "max": 771.2714000000001
+      },
+      "dt_s": {
+        "min": 0.0015999999999394277,
+        "p01": 0.050649000000018984,
+        "median": 0.4436000000000604,
+        "mean": 0.47485002001250776,
+        "p99": 1.1794019999999998,
+        "max": 1.7886000000000024
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.0,
+        "p01": 0.026076809620810593,
+        "median": 0.17870926109186394,
+        "mean": 0.16568033911199317,
+        "p99": 0.2373604853382298,
+        "max": 0.24413520843991346
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.00045641,
+        0.0002457725
+      ],
+      "file": "2.agent-random-k3.dat",
+      "rule_id": 6,
+      "strategy_family": "random",
+      "neighbor_count": 3
+    },
+    "3.agent-mostinfluential-k1.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1563.0,
+        "p01": 1568.39,
+        "median": 1599.5,
+        "mean": 1600.0,
+        "p99": 1630.1,
+        "max": 1635.0
+      },
+      "run_duration_s": {
+        "min": 730.9638,
+        "p01": 731.131821,
+        "median": 743.3755,
+        "mean": 741.982464,
+        "p99": 751.171511,
+        "max": 751.4636
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.04830000000001846,
+        "median": 0.4311000000000149,
+        "mean": 0.46402905816135087,
+        "p99": 1.1734510000000091,
+        "max": 1.7886999999999489
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.0,
+        "p01": 0.03257299494980466,
+        "median": 0.20628620894281807,
+        "mean": 0.18601190381296615,
+        "p99": 0.24105186163977244,
+        "max": 0.24528350943347169
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.0009697749999999999,
+        -0.0007864825000000001
+      ],
+      "file": "3.agent-mostinfluential-k1.dat",
+      "rule_id": 7,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 1
+    },
+    "3.agent-mostinfluential-k2.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1542.0,
+        "p01": 1543.96,
+        "median": 1596.0,
+        "mean": 1600.0,
+        "p99": 1649.6299999999999,
+        "max": 1656.0
+      },
+      "run_duration_s": {
+        "min": 741.5136,
+        "p01": 741.617431,
+        "median": 751.3919,
+        "mean": 750.901594,
+        "p99": 755.510076,
+        "max": 755.5432
+      },
+      "dt_s": {
+        "min": 0.001599999999996271,
+        "p01": 0.04914900000000458,
+        "median": 0.43694999999999595,
+        "mean": 0.4696070006253909,
+        "p99": 1.1755020000000402,
+        "max": 1.8423999999999978
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.001,
+        "p01": 0.02942787793912432,
+        "median": 0.19382982226685344,
+        "mean": 0.17650709419871505,
+        "p99": 0.23994374340665772,
+        "max": 0.24495101551126505
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        -0.0008322099999999999,
+        -0.0006264125000000001
+      ],
+      "file": "3.agent-mostinfluential-k2.dat",
+      "rule_id": 8,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 2
+    },
+    "3.agent-mostinfluential-k3.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1559.0,
+        "p01": 1559.49,
+        "median": 1601.0,
+        "mean": 1600.0,
+        "p99": 1649.1599999999999,
+        "max": 1657.0
+      },
+      "run_duration_s": {
+        "min": 749.2943,
+        "p01": 749.378776,
+        "median": 756.2923499999999,
+        "mean": 757.4184359999999,
+        "p99": 766.935436,
+        "max": 767.1038
+      },
+      "dt_s": {
+        "min": 0.0025000000000545697,
+        "p01": 0.05024899999999665,
+        "median": 0.4419000000000324,
+        "mean": 0.473682574108818,
+        "p99": 1.1854999999999905,
+        "max": 1.8423999999999978
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.0,
+        "p01": 0.0291547594742265,
+        "median": 0.1830027322200409,
+        "mean": 0.16963353219231186,
+        "p99": 0.23803361107205007,
+        "max": 0.2673013280924732
+      },
+      "n_outside_arena": 8,
+      "centroid_xy": [
+        -0.0014888725,
+        -0.0010160174999999999
+      ],
+      "file": "3.agent-mostinfluential-k3.dat",
+      "rule_id": 9,
+      "strategy_family": "mostinfluential",
+      "neighbor_count": 3
+    },
+    "4.agent-all-neighbors-k4.dat": {
+      "n_rows": 400000,
+      "n_cols": 5,
+      "n_nan": 0,
+      "n_duplicate_rows": 0,
+      "n_experiments": 50,
+      "experiment_id_range": [
+        1,
+        50
+      ],
+      "agent_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runs_with_five_agents": 50,
+      "runs_with_shared_time_vector": 50,
+      "events_per_run": {
+        "min": 1562.0,
+        "p01": 1564.45,
+        "median": 1601.0,
+        "mean": 1600.0,
+        "p99": 1639.06,
+        "max": 1642.0
+      },
+      "run_duration_s": {
+        "min": 754.2106,
+        "p01": 754.5853520000001,
+        "median": 759.2688,
+        "mean": 760.9947799999999,
+        "p99": 768.856123,
+        "max": 769.1194
+      },
+      "dt_s": {
+        "min": 0.0015999999999998238,
+        "p01": 0.05119999999999436,
+        "median": 0.44390000000005614,
+        "mean": 0.4759191869918699,
+        "p99": 1.1847549999999916,
+        "max": 1.7885999999999989
+      },
+      "n_nonpositive_dt": 0,
+      "radius_m": {
+        "min": 0.0,
+        "p01": 0.026569717951958616,
+        "median": 0.1765757626853899,
+        "mean": 0.1645114048413581,
+        "p99": 0.23694725151391818,
+        "max": 0.24456083087853622
+      },
+      "n_outside_arena": 0,
+      "centroid_xy": [
+        0.0025375750000000002,
+        -0.0013061675
+      ],
+      "file": "4.agent-all-neighbors-k4.dat",
+      "rule_id": 10,
+      "strategy_family": "all",
+      "neighbor_count": 4
+    }
+  }
+}

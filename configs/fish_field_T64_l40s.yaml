@@ -1,0 +1,42 @@
+# Field ablation config for the 48 GB L40S (when the 80 GB H100/H200 cards are
+# saturated). Identical to configs/fish_field_T64.yaml EXCEPT the batch/epoch
+# budget: batch 32 fits the L40S comfortably (~23 GB), and 60 epochs at 800
+# steps/epoch gives 48,000 optimizer steps -- the SAME step budget as
+# transformer_inv_T64 (batch 64 x 120 epochs x 400 steps). The comparison is
+# matched by gradient steps; only the batch size differs from the trajectory
+# baseline. This is the configuration behind the field results in the paper
+# (one job per fold; see reproduce/fish_train.sh).
+
+tag: field_T64
+
+window: 64
+folds: [0, 1, 2, 3, 4]
+seed: 20260713
+
+grid: 32
+patch: 2
+splat: bilinear
+sigma: 0.60
+clip_std: 6.0
+
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+batch_size: 32          # fits the 48 GB L40S; see header for the step-matching
+epochs: 60              # 800 steps/epoch x 60 = 48,000 steps == baseline budget
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+
+augment:
+  enabled: true
+  rotate: true
+  reflect: true
+  permute: false
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

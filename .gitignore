@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Input data (download or regenerate; see README)
+FISH_DATA/
+GENERATED_DATA/
+GENERATED_DATA_smoke/
+data/fish/
+
+# Generated during reproduction
+configs/fish_ablations/
+results/checkpoints/ruletree_smoke/
+results/checkpoints/ruletree_rowcol_smoke/
+results/logs/ruletree_smoke/
+results/logs/ruletree_rowcol_smoke/
+results/checkpoints/*/epoch_*.pt
+results/figures/ruletree_*/
+results/figures/fish/*.png
+results/fish/smoke_T64/
+results/fish/field_smoke_T64/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

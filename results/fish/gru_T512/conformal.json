@@ -1,0 +1,238 @@
+{
+  "tag": "gru_T512",
+  "k_reg": 2,
+  "lambda_reg": 0.1,
+  "alphas": {
+    "0.05": {
+      "target_coverage": 0.95,
+      "empirical_coverage": 0.9860093271152565,
+      "coverage_ci95": [
+        0.9792364367046216,
+        0.9926175734496464
+      ],
+      "mean_set_size": 1.055962691538974,
+      "set_size_ci95": [
+        1.0435343210382857,
+        1.0688747259075506
+      ],
+      "median_set_size": 1.0,
+      "singleton_rate": 0.944037308461026,
+      "mean_qhat": 0.9643405460049788,
+      "set_size_hist": {
+        "1": 1417,
+        "2": 84
+      },
+      "per_class": {
+        "none-0": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-2": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0222222222222221,
+          "n": 135
+        },
+        "near-3": {
+          "coverage": 0.9705882352941176,
+          "mean_set_size": 1.0735294117647058,
+          "n": 136
+        },
+        "rand-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 138
+        },
+        "rand-2": {
+          "coverage": 0.9855072463768116,
+          "mean_set_size": 1.0507246376811594,
+          "n": 138
+        },
+        "rand-3": {
+          "coverage": 0.9191176470588235,
+          "mean_set_size": 1.1397058823529411,
+          "n": 136
+        },
+        "infl-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0072992700729928,
+          "n": 137
+        },
+        "infl-2": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0225563909774436,
+          "n": 133
+        },
+        "infl-3": {
+          "coverage": 0.9857142857142858,
+          "mean_set_size": 1.2357142857142858,
+          "n": 140
+        },
+        "all-4": {
+          "coverage": 0.9852941176470589,
+          "mean_set_size": 1.0588235294117647,
+          "n": 136
+        }
+      }
+    },
+    "0.10": {
+      "target_coverage": 0.9,
+      "empirical_coverage": 0.9793471019320453,
+      "coverage_ci95": [
+        0.9703161328665849,
+        0.9873166334298522
+      ],
+      "mean_set_size": 1.022651565622918,
+      "set_size_ci95": [
+        1.0147450614036189,
+        1.0312921323644866
+      ],
+      "median_set_size": 1.0,
+      "singleton_rate": 0.977348434377082,
+      "mean_qhat": 0.9051677866273049,
+      "set_size_hist": {
+        "1": 1467,
+        "2": 34
+      },
+      "per_class": {
+        "none-0": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-2": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0074074074074073,
+          "n": 135
+        },
+        "near-3": {
+          "coverage": 0.9632352941176471,
+          "mean_set_size": 1.0294117647058822,
+          "n": 136
+        },
+        "rand-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 138
+        },
+        "rand-2": {
+          "coverage": 0.9710144927536232,
+          "mean_set_size": 1.0217391304347827,
+          "n": 138
+        },
+        "rand-3": {
+          "coverage": 0.8970588235294118,
+          "mean_set_size": 1.0514705882352942,
+          "n": 136
+        },
+        "infl-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 137
+        },
+        "infl-2": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0075187969924813,
+          "n": 133
+        },
+        "infl-3": {
+          "coverage": 0.9571428571428572,
+          "mean_set_size": 1.0785714285714285,
+          "n": 140
+        },
+        "all-4": {
+          "coverage": 0.9852941176470589,
+          "mean_set_size": 1.0514705882352942,
+          "n": 136
+        }
+      }
+    },
+    "0.20": {
+      "target_coverage": 0.8,
+      "empirical_coverage": 0.9753497668221186,
+      "coverage_ci95": [
+        0.9651143615389336,
+        0.9845852237574758
+      ],
+      "mean_set_size": 1.0133244503664225,
+      "set_size_ci95": [
+        1.0079732895659885,
+        1.0193079114589385
+      ],
+      "median_set_size": 1.0,
+      "singleton_rate": 0.9866755496335776,
+      "mean_qhat": 0.8295756132464295,
+      "set_size_hist": {
+        "1": 1481,
+        "2": 20
+      },
+      "per_class": {
+        "none-0": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 136
+        },
+        "near-2": {
+          "coverage": 0.9925925925925926,
+          "mean_set_size": 1.0074074074074073,
+          "n": 135
+        },
+        "near-3": {
+          "coverage": 0.9632352941176471,
+          "mean_set_size": 1.0220588235294117,
+          "n": 136
+        },
+        "rand-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 138
+        },
+        "rand-2": {
+          "coverage": 0.9710144927536232,
+          "mean_set_size": 1.0217391304347827,
+          "n": 138
+        },
+        "rand-3": {
+          "coverage": 0.8823529411764706,
+          "mean_set_size": 1.0073529411764706,
+          "n": 136
+        },
+        "infl-1": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0,
+          "n": 137
+        },
+        "infl-2": {
+          "coverage": 1.0,
+          "mean_set_size": 1.0075187969924813,
+          "n": 133
+        },
+        "infl-3": {
+          "coverage": 0.9428571428571428,
+          "mean_set_size": 1.05,
+          "n": 140
+        },
+        "all-4": {
+          "coverage": 0.9779411764705882,
+          "mean_set_size": 1.0294117647058822,
+          "n": 136
+        }
+      }
+    }
+  }
+}

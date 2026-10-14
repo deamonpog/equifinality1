@@ -1,0 +1,41 @@
+# Local smoke test for the field ablation: prove the pipeline runs end to end
+# (renderer -> field transformer -> probs_fold contract -> RAPS) before
+# committing the full 5-fold, 120-epoch job to the cluster. NOT a scientific
+# run: one fold, two epochs, expected to produce artifacts without crashing.
+#
+#   python scripts/fish/15_train_fish_field.py --config configs/fish_field_smoke.yaml
+#   python scripts/fish/10_calibrate_fish_raps.py --tag field_smoke_T64
+
+tag: field_smoke_T64
+
+window: 64
+folds: [0]
+seed: 20260713
+
+grid: 32
+patch: 2
+splat: bilinear
+sigma: 0.60
+clip_std: 6.0
+
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+batch_size: 16
+epochs: 2
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+
+augment:
+  enabled: true
+  rotate: true
+  reflect: true
+  permute: false
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

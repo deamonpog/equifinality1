@@ -1,0 +1,45 @@
+name: ruletree_rowcol_smoke
+
+# Smoke test for the decomposed row/col spatial embedding.
+# Identical to ruletree_smoke.yaml except positional_encoding is
+# time_row_col. Verifies the rowcol code path end-to-end before the
+# full rowcol run. Uses the same smoke data as ruletree_smoke.yaml.
+
+data:
+  system: rule_trees
+  data_dir: GENERATED_DATA_smoke
+  grid_size: 50
+  schelling_patch_size: 2
+  num_snapshots: 4
+  train_frac: 0.7
+  val_frac: 0.15
+  n_tree_candidates: 100
+  tree_max_depth: 2
+
+model:
+  model_size: tiny
+  dropout: 0.1
+  positional_encoding: time_row_col
+
+training:
+  batch_size: 8
+  lr: 3.0e-4
+  weight_decay: 0.1
+  grad_clip: 1.0
+  epochs: 3
+  label_smoothing: 0.05
+  seed: 42
+  device: cuda
+  lr_scheduler: cosine
+  warmup_epochs: 1
+  checkpoint_dir: results/checkpoints
+  log_dir: results/logs
+  save_every: 5
+
+conformal:
+  enabled: true
+  method: raps
+  alpha_levels: [0.10, 0.20]
+  k_reg: 5
+  lambda_reg: 0.01
+  cal_fraction: 0.5

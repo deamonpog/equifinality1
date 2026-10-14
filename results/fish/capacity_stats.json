@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "n_boot": 2000,
+    "seed": 0,
+    "clustering_primary": "exp_id",
+    "clustering_sensitivity": "run",
+    "n_experiments": 50,
+    "n_runs": 550,
+    "n_windows": 13054,
+    "deltas": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "point_estimate": "full-data (not bootstrap mean)"
+  },
+  "tags": {
+    "small": {
+      "tag": "transformer_inv_T64_small_verify",
+      "n_params": 148091,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "depth": {
+      "tag": "transformer_inv_T64_depth",
+      "n_params": 182771,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "large": {
+      "tag": "transformer_inv_T64",
+      "n_params": 1812619,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "gru": {
+      "tag": "gru_T64",
+      "n_params": null,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "point": {
+    "acc_small": 0.8025892446759614,
+    "acc_depth": 0.7847403094836831,
+    "acc_large": 0.9271487666615597,
+    "acc_gru": 0.9286042592308871,
+    "d_depth_minus_small": -0.01784893519227826,
+    "d_depth_minus_large": -0.14240845717787654,
+    "d_large_minus_small": 0.12455952198559828,
+    "d_gru_minus_large": 0.0014554925693274212,
+    "d_gru_minus_small": 0.1260150145549257,
+    "g_gap_recovery": -0.1432964329643299
+  },
+  "bootstrap": {
+    "exp_id": {
+      "acc_small": {
+        "point": 0.8025892446759614,
+        "ci_lo": 0.7891338246470365,
+        "ci_hi": 0.8150196554719726
+      },
+      "acc_depth": {
+        "point": 0.7847403094836831,
+        "ci_lo": 0.769808277376556,
+        "ci_hi": 0.797689056099194
+      },
+      "acc_large": {
+        "point": 0.9271487666615597,
+        "ci_lo": 0.904728783507252,
+        "ci_hi": 0.9459940821372468
+      },
+      "acc_gru": {
+        "point": 0.9286042592308871,
+        "ci_lo": 0.90701922340507,
+        "ci_hi": 0.9465749408454646
+      },
+      "d_depth_minus_small": {
+        "point": -0.01784893519227826,
+        "ci_lo": -0.027511652830747222,
+        "ci_hi": -0.008430394639475869
+      },
+      "d_depth_minus_large": {
+        "point": -0.14240845717787654,
+        "ci_lo": -0.15552702414881478,
+        "ci_hi": -0.12909499574430583
+      },
+      "d_large_minus_small": {
+        "point": 0.12455952198559828,
+        "ci_lo": 0.11006616055562161,
+        "ci_hi": 0.1379213243827555
+      },
+      "d_gru_minus_large": {
+        "point": 0.0014554925693274212,
+        "ci_lo": -0.0029098928766533223,
+        "ci_hi": 0.005594748603559363
+      },
+      "d_gru_minus_small": {
+        "point": 0.1260150145549257,
+        "ci_lo": 0.11132586649037197,
+        "ci_hi": 0.13912717221144108
+      },
+      "g_gap_recovery": {
+        "point": -0.1432964329643299,
+        "ci_lo": -0.23025961207031598,
+        "ci_hi": -0.06445286060992844
+      }
+    },
+    "run": {
+      "acc_small": {
+        "point": 0.8025892446759614,
+        "ci_lo": 0.789614462720121,
+        "ci_hi": 0.8155565062798967
+      },
+      "acc_depth": {
+        "point": 0.7847403094836831,
+        "ci_lo": 0.770639933815523,
+        "ci_hi": 0.7990045828948737
+      },
+      "acc_large": {
+        "point": 0.9271487666615597,
+        "ci_lo": 0.9178792349875325,
+        "ci_hi": 0.9364048012773988
+      },
+      "acc_gru": {
+        "point": 0.9286042592308871,
+        "ci_lo": 0.9202001074427096,
+        "ci_hi": 0.9367108005691401
+      },
+      "d_depth_minus_small": {
+        "point": -0.01784893519227826,
+        "ci_lo": -0.024975149346922257,
+        "ci_hi": -0.010635100543963332
+      },
+      "d_depth_minus_large": {
+        "point": -0.14240845717787654,
+        "ci_lo": -0.15367725645801,
+        "ci_hi": -0.13158886290420174
+      },
+      "d_large_minus_small": {
+        "point": 0.12455952198559828,
+        "ci_lo": 0.11360410720348021,
+        "ci_hi": 0.13509357824153193
+      },
+      "d_gru_minus_large": {
+        "point": 0.0014554925693274212,
+        "ci_lo": -0.004746611343286067,
+        "ci_hi": 0.008037416103920893
+      },
+      "d_gru_minus_small": {
+        "point": 0.1260150145549257,
+        "ci_lo": 0.11403905652568387,
+        "ci_hi": 0.1383943777217984
+      },
+      "g_gap_recovery": {
+        "point": -0.1432964329643299,
+        "ci_lo": -0.20869209738806954,
+        "ci_hi": -0.0813113994439298
+      }
+    }
+  },
+  "delta_sensitivity_primary": {
+    "0.01": {
+      "verdict": "inconclusive",
+      "near_small": false,
+      "near_large": false,
+      "interpretation": "a paired-difference CI straddles a delta boundary; underpowered at this margin"
+    },
+    "0.02": {
+      "verdict": "inconclusive",
+      "near_small": false,
+      "near_large": false,
+      "interpretation": "a paired-difference CI straddles a delta boundary; underpowered at this margin"
+    },
+    "0.03": {
+      "verdict": "near_small_baseline",
+      "near_small": true,
+      "near_large": false,
+      "interpretation": "comparable-budget depth/architecture change yields no practically meaningful improvement in extraction performance within the tested configurations"
+    }
+  }
+}

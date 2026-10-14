@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code or the rule library, please cite the paper below."
+title: "Measuring Equifinality: Conformal Rule Identification in Agent-Based Models (code and data)"
+authors:
+  - family-names: Jayalath
+    given-names: Chathura
+    affiliation: University of Central Florida
+  - family-names: Rand
+    given-names: William
+    affiliation: North Carolina State University
+  - family-names: Garibay
+    given-names: Ivan
+    affiliation: University of Central Florida
+license: MIT
+repository-code: "https://github.com/deamonpog/equifinality1"
+preferred-citation:
+  type: conference-paper
+  title: "Measuring Equifinality: Conformal Rule Identification in Agent-Based Models"
+  authors:
+    - family-names: Jayalath
+      given-names: Chathura
+    - family-names: Rand
+      given-names: William
+    - family-names: Garibay
+      given-names: Ivan
+  collection-title: "Proceedings of the Computational Social Science Society of the Americas Annual Conference"
+  publisher:
+    name: Springer
+  year: 2026

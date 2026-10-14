@@ -1,0 +1,36 @@
+# Trajectory transformer on rotation-invariant per-agent features, T = 64.
+#
+# The 1.8M-parameter transformer of Sect. 5 (Fig. 1, Fig. 3, Table 2 row 3):
+# twelve rotation-invariant features per agent per kick, 4 layers, d = 128,
+# trained to convergence (120 epochs, early stopping on validation).
+# Its fold checkpoints are also the model transferred to the robots (Sect. 6).
+
+tag: transformer_inv_T64
+
+window: 64
+features: invariant     # all | basic | invariant
+folds: [0, 1, 2, 3, 4]
+seed: 20260713
+
+d_model: 128
+n_heads: 8
+n_layers: 4
+dropout: 0.1
+
+batch_size: 64
+epochs: 120             # was 40, and val accuracy had not plateaued
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+num_workers: 0
+
+augment:
+  enabled: true
+  rotate: true          # auto-disabled for invariant features (a no-op there)
+  reflect: true         # still meaningful: it flips the sign of the focal-frame sines
+  permute: true
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

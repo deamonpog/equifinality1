@@ -1,0 +1,58 @@
+# Trajectory Transformer, invariant per-agent features, FULL DEPTH at low budget.
+#
+# The depth/architecture control for the capacity analysis. The small config
+# (transformer_inv_T64_small) shrank the 1.8M model in BOTH width (d 128->48)
+# and depth (layers 4->2) to reach ~148k params, so "capacity" was entangled
+# with "depth". This run keeps the full FOUR layers of the 1.8M model and
+# reduces only the width (d=40), landing at ~183k params -- comparable to the
+# GRU (155,659) and the 148k small transformer.
+#
+# It supports exactly two labelled comparisons, and no more:
+#   148k-2L  vs  ~183k-4L : a COMPARABLE-BUDGET DEPTH/ARCHITECTURE comparison
+#                           (budget held ~fixed; depth and the width needed to
+#                           hit that budget both change -- not a pure depth
+#                           contrast).
+#   ~183k-4L vs  1.8M-4L  : a WIDTH / PARAMETER-BUDGET comparison at FIXED depth.
+#
+# It does NOT address the representation confound (group-13 vs per-agent tokens)
+# or the cross-architecture GRU comparison; those require matched input
+# representations, which we do not have and do not claim.
+#
+# Param count model (verified against the two known points):
+#   params(d, L) = (24L + 13) d^2 + (26L + 105) d + 11
+#   d=48,  L=2 -> 148,091   (the small model)
+#   d=128, L=4 -> 1,812,619 (the 1.8M model)
+#   d=40,  L=4 ->   182,771 (this run)
+# The training script prints and stores the exact count; treat the above as the
+# design target, and read n_params from the run for the paper.
+
+tag: transformer_inv_T64_depth
+
+window: 64
+features: invariant
+folds: [0, 1, 2, 3, 4]
+seed: 20260713
+
+d_model: 40             # full-depth, low-budget: ~183k params at 4 layers
+n_heads: 4              # 40 / 4 = head_dim 10
+n_layers: 4             # FULL depth of the 1.8M model, unlike the 2-layer small
+
+dropout: 0.1
+
+batch_size: 64
+epochs: 120             # same budget as the small and the 1.8M runs (fairness)
+patience: 25
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+num_workers: 0
+
+augment:
+  enabled: true
+  rotate: true          # auto-disabled for invariant features (a no-op there)
+  reflect: true
+  permute: true
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2

@@ -1,0 +1,15 @@
+{
+  "tag": "transformer_inv_T64_small_verify",
+  "config": "configs/fish_transformer_inv_small.yaml",
+  "n_params": 148091,
+  "n_params_by_fold": {
+    "0": 148091,
+    "1": 148091,
+    "2": 148091,
+    "3": 148091,
+    "4": 148091
+  },
+  "test_acc_mean": 0.8025921970915639,
+  "test_acc_std": 0.015122364250383824,
+  "epochs_budget": 120
+}

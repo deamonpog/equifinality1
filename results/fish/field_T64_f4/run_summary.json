@@ -1,0 +1,15 @@
+{
+  "tag": "field_T64_f4",
+  "config": "configs/fish_ablations/field_T64_shared_f4.yaml",
+  "n_params": 1800459,
+  "n_params_by_fold": {
+    "4": 1800459
+  },
+  "test_acc_mean": 0.6848368522072936,
+  "test_acc_std": 0.0,
+  "epochs_budget": 60,
+  "representation": "field",
+  "grid": 32,
+  "patch": 2,
+  "splat": "bilinear"
+}

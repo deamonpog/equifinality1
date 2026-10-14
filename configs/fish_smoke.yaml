@@ -1,0 +1,33 @@
+# End-to-end smoke test. Tiny model, one fold, two epochs.
+# Proves the pipeline runs on the GPU and produces the expected artifacts.
+# It is NOT expected to produce a good accuracy.
+
+tag: smoke_T64
+
+window: 64
+features: all
+folds: [0]
+seed: 20260713
+
+d_model: 32
+n_heads: 4
+n_layers: 2
+dropout: 0.1
+
+batch_size: 32
+epochs: 2
+patience: 2
+lr: 3.0e-4
+weight_decay: 0.01
+label_smoothing: 0.05
+num_workers: 2
+
+augment:
+  enabled: true
+  rotate: true
+  reflect: true
+  permute: true
+
+alphas: [0.05, 0.10, 0.20]
+raps_lambda: 0.1
+raps_k_reg: 2
